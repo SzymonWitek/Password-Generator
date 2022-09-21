@@ -58,7 +58,7 @@ export const Wrapper = styled.label<WrapperProps>`
     width: 8px;
     height: 15px;
     /* border: solid ${({ theme: { colors } }) => colors.gray}; */
-    border: solid rgb(20, 20, 20);
+    border: solid ${({ theme: { colors } }) => colors.dark};
     border-width: 0 4px 4px 0;
     transform: rotate(45deg);
   }

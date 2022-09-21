@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-import { Card } from 'components';
+import { Card, Button } from 'components';
 
 export const StyledCard = styled(Card)`
   display: flex;
@@ -9,7 +9,7 @@ export const StyledCard = styled(Card)`
   align-items: center;
   width: min(450px, 85vw);
   padding: ${({ theme: { space } }) => `${space.md} ${space.xl}`};
-  margin-top: ${({ theme: { space } }) => space.md};
+  margin: ${({ theme: { space } }) => space.md} 0;
 
   @media (${({ theme: { breakpoints } }) => breakpoints.lg}) {
     margin-top: ${({ theme: { space } }) => space.xl};
@@ -26,4 +26,9 @@ export const Option = styled.div`
 export const Text = styled.p`
   display: flex;
   align-items: center;
+`;
+
+export const StyledButton = styled(Button)`
+  width: 80%;
+  margin: ${({ theme: { space } }) => space.xl} 0;
 `;

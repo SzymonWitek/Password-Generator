@@ -14,6 +14,7 @@ const theme = {
     // background: 'rgb(17, 16, 22)',
     background: 'rgb(0, 11, 19)',
     gray: 'rgb(46,45,53)',
+    dark: 'rgb(34,33,39)',
     green: 'rgba(164, 255, 175)'
   },
   bodyFontSizes: {

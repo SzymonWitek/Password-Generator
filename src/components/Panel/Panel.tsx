@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import { Checkbox } from 'components/UI';
-import { StyledCard, Option, Text } from './Panel.css';
+import { Checkbox, Button } from 'components';
+import { StyledCard, Option, Text, StyledButton } from './Panel.css';
 
 function Panel() {
   const [isUppercaseActive, setIsUppercaseActive] = useState(false);
@@ -30,6 +30,7 @@ function Panel() {
         <Checkbox isActive={isSymbolsActive} setIsActive={setIsSymbolsActive} />{' '}
         <Text>Include Symbols</Text>
       </Option>
+      <StyledButton>Generate ➜</StyledButton>
     </StyledCard>
   );
 }
