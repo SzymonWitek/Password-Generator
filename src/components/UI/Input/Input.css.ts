@@ -13,6 +13,7 @@ export const Wrapper = styled.div`
 
 export const StyledInput = styled.input`
   width: min(450px, 85vw);
+  font-family: ${({ theme: { fonts } }) => fonts.primary};
   font-size: 20px;
   padding: 15px;
   background-color: ${({ theme: { colors } }) => colors.gray};

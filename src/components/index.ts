@@ -10,3 +10,4 @@ export {
 
 export { Bars } from './Bars';
 export { PasswordInput } from './PasswordInput';
+export { Panel } from './Panel';

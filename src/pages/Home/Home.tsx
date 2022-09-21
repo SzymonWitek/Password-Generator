@@ -1,4 +1,4 @@
-import { PasswordInput } from 'components';
+import { PasswordInput, Panel } from 'components';
 import { Wrapper, Text } from './Home.css';
 
 function Home() {
@@ -6,6 +6,7 @@ function Home() {
     <Wrapper>
       <Text>Password Generator</Text>
       <PasswordInput />
+      <Panel />
     </Wrapper>
   );
 }

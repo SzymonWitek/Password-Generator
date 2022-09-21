@@ -17,7 +17,7 @@ const theme = {
     green: 'rgba(164, 255, 175)'
   },
   bodyFontSizes: {
-    sm: '16px',
+    sm: '14px',
     md: '16px',
     lg: '18px',
     xl: '18px',
@@ -27,7 +27,7 @@ const theme = {
     primary: 'Roboto Mono,Arial,sans-serif'
   },
   space: {
-    small: '5px',
+    s: '5px',
     md: '10px',
     xl: '15px',
     xxl: '20px',
