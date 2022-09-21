@@ -1,5 +1,13 @@
+import { PasswordInput } from 'components';
+import { Wrapper, Text } from './Home.css';
+
 function Home() {
-  return <div>Home</div>;
+  return (
+    <Wrapper>
+      <Text>Password Generator</Text>
+      <PasswordInput />
+    </Wrapper>
+  );
 }
 
 export default Home;

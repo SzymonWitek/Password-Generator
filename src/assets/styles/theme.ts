@@ -8,10 +8,13 @@ const theme = {
     xxl: 'min-width:1536px'
   },
   colors: {
-    text: 'rgb(250,250,250)',
-    textDark: 'rgb(171,171,171)',
-    background: '#000b13',
-    secondary: 'rgba(166, 255, 198)'
+    white: 'rgb(250,250,250)',
+    // textDark: 'rgb(101,99,113)',
+    textDark: 'rgb(140,140,150)',
+    // background: 'rgb(17, 16, 22)',
+    background: 'rgb(0, 11, 19)',
+    gray: 'rgb(46,45,53)',
+    green: 'rgba(164, 255, 175)'
   },
   bodyFontSizes: {
     sm: '16px',
@@ -27,7 +30,8 @@ const theme = {
     small: '5px',
     md: '10px',
     xl: '15px',
-    xxl: '20px'
+    xxl: '20px',
+    xxxl: '30px'
   }
 };
 

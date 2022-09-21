@@ -14,6 +14,7 @@ a{
 
 html,body{
     font-family:${({ theme: { fonts } }) => fonts.primary};
+    color:${({ theme: { colors } }) => colors.white}
 }
 
 p{
@@ -35,6 +36,7 @@ p{
     font-size:${({ theme: { bodyFontSizes } }) => bodyFontSizes.lg};
     line-height:1.375;
   }
+
   h2{
     font-size:26px;
   }
