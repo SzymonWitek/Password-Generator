@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Checkbox, Summary, RangeSlider } from 'components';
+import { Checkbox, Summary, RangeSlider, PasswordGenerator } from 'components';
 import { StyledCard, Option, Text, StyledButton, Wrapper } from './Panel.css';
 
 function Panel() {
@@ -56,7 +56,15 @@ function Panel() {
           <Text>Include Symbols</Text>
         </Option>
         <Summary level={securityLevel} />
-        <StyledButton>Generate ➜</StyledButton>
+        <PasswordGenerator
+          args={{
+            length: charLenght,
+            symbols: isSymbolsActive,
+            numbers: isNumbersActive,
+            lowercases: isLowercaseActive,
+            uppercases: isUppercaseActive
+          }}
+        />
       </Wrapper>
     </StyledCard>
   );

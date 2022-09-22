@@ -9,13 +9,8 @@ interface CheckboxProps {
 
 function Checkbox({ isActive, setIsActive }: CheckboxProps) {
   const handleClick = () => {
-    console.log('click');
     setIsActive((prevState) => !prevState);
   };
-
-  useEffect(() => {
-    console.log({ isActive });
-  }, [isActive]);
 
   return (
     <Wrapper isActive={isActive}>

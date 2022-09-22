@@ -4,10 +4,12 @@ import { Input } from 'components';
 export const StyledInput = styled(Input)`
   margin-top: ${({ theme: { space } }) => space.xxl};
   width: min(450px, 90vw);
+  letter-spacing: 0.5px;
 
   @media (${({ theme: { breakpoints } }) => breakpoints.lg}) {
     margin-top: ${({ theme: { space } }) => space.xxxl};
     width: min(580px, 90vw);
+    padding-left: 35px;
   }
 `;
 
