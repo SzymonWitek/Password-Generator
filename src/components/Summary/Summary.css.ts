@@ -3,11 +3,11 @@ import styled from 'styled-components/macro';
 export const Wrapper = styled.div`
   display: flex;
   width: 100%;
-  background-color: rgba(10, 10, 10, 0.45);
+  background-color: ${({ theme: { colors } }) => colors.black};
   align-items: center;
   justify-content: space-between;
   text-transform: uppercase;
-  padding: 5px 10px;
+  padding: ${({ theme: { space } }) => space.md};
 
   @media (${({ theme: { breakpoints } }) => breakpoints.sm}) {
     width: 80%;

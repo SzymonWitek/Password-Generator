@@ -10,10 +10,6 @@ export const StyledCard = styled(Card)`
   padding: ${({ theme: { space } }) => `${space.md} ${space.xl}`};
   margin: ${({ theme: { space } }) => space.md} 0;
 
-  /* @media (${({ theme: { breakpoints } }) => breakpoints.md}) {
-    align-items: center;
-  } */
-
   @media (${({ theme: { breakpoints } }) => breakpoints.lg}) {
     margin-top: ${({ theme: { space } }) => space.xl};
   }

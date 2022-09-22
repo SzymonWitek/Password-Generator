@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Checkbox, Summary } from 'components';
+import { Checkbox, Summary, RangeSlider } from 'components';
 import { StyledCard, Option, Text, StyledButton, Wrapper } from './Panel.css';
 
 function Panel() {
@@ -8,6 +8,7 @@ function Panel() {
   const [isLowercaseActive, setIsLowercase] = useState(false);
   const [isNumbersActive, setIsNumbersActive] = useState(false);
   const [isSymbolsActive, setIsSymbolsActive] = useState(false);
+  const [charLenght, setCharLength] = useState(0);
 
   const securityLevel = [
     isUppercaseActive,
@@ -23,6 +24,12 @@ function Panel() {
   return (
     <StyledCard>
       <Wrapper>
+        <RangeSlider
+          min={0}
+          max={10}
+          value={charLenght}
+          setValue={setCharLength}
+        />
         <Option>
           <Checkbox
             isActive={isUppercaseActive}

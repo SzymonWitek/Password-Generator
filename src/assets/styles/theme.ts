@@ -17,7 +17,8 @@ const theme = {
     gray: 'rgb(46,45,53)',
     dark: 'rgb(34,33,39)',
     yellow: 'rgb(255,217,88)',
-    green: 'rgba(164, 255, 175)'
+    green: 'rgba(164, 255, 175)',
+    black: 'rgba(10, 10, 10, 0.45)'
   },
   bodyFontSizes: {
     sm: '14px',
