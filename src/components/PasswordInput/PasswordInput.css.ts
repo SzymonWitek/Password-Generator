@@ -3,6 +3,7 @@ import { Input } from 'components';
 
 export const StyledInput = styled(Input)`
   margin-top: ${({ theme: { space } }) => space.xxl};
+  width: min(450px, 90vw);
 
   @media (${({ theme: { breakpoints } }) => breakpoints.lg}) {
     margin-top: ${({ theme: { space } }) => space.xxxl};

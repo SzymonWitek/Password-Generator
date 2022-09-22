@@ -1,5 +1,6 @@
 const theme = {
   breakpoints: {
+    sssm: 'min-width:380px',
     ssm: 'min-width:425px',
     sm: 'min-width:640px',
     md: 'min-width:768px',
@@ -15,6 +16,7 @@ const theme = {
     background: 'rgb(0, 11, 19)',
     gray: 'rgb(46,45,53)',
     dark: 'rgb(34,33,39)',
+    yellow: 'rgb(255,217,88)',
     green: 'rgba(164, 255, 175)'
   },
   bodyFontSizes: {

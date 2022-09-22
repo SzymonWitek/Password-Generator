@@ -11,3 +11,4 @@ export {
 export { Bars } from './Bars';
 export { PasswordInput } from './PasswordInput';
 export { Panel } from './Panel';
+export { Summary } from './Summary';
