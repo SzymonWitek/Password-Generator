@@ -7,6 +7,7 @@ export const StyledInput = styled(Input)`
 
   @media (${({ theme: { breakpoints } }) => breakpoints.lg}) {
     margin-top: ${({ theme: { space } }) => space.xxxl};
+    width: min(580px, 90vw);
   }
 `;
 

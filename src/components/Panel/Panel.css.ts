@@ -12,6 +12,7 @@ export const StyledCard = styled(Card)`
 
   @media (${({ theme: { breakpoints } }) => breakpoints.lg}) {
     margin-top: ${({ theme: { space } }) => space.xl};
+    width: min(580px, 90vw);
   }
 `;
 
@@ -26,12 +27,11 @@ export const Wrapper = styled.div`
 export const Option = styled.div`
   display: flex;
   height: 25px;
-  margin: ${({ theme: { space } }) => space.xxl} 0;
-  width: 90%;
-  /* width: 90%; */
+  margin: ${({ theme: { space } }) => space.md} 0;
+  width: 100%;
 
-  @media (${({ theme: { breakpoints } }) => breakpoints.sm}) {
-    width: 80%;
+  @media (${({ theme: { breakpoints } }) => breakpoints.ssm}) {
+    width: 90%;
   }
 `;
 
@@ -44,7 +44,7 @@ export const StyledButton = styled(Button)`
   width: 100%;
   margin: ${({ theme: { space } }) => space.xl} 0;
 
-  @media (${({ theme: { breakpoints } }) => breakpoints.sm}) {
-    width: 80%;
+  @media (${({ theme: { breakpoints } }) => breakpoints.ssm}) {
+    width: 90%;
   }
 `;

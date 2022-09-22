@@ -4,10 +4,11 @@ export const Wrapper = styled.div`
   display: flex;
   width: 90%;
   flex-direction: column;
-  padding: ${({ theme: { space } }) => space.xl} 0;
+  padding: ${({ theme: { space } }) => space.s} 0
+    ${({ theme: { space } }) => space.xxxl};
 
-  @media (${({ theme: { breakpoints } }) => breakpoints.sm}) {
-    width: 80%;
+  @media (${({ theme: { breakpoints } }) => breakpoints.ssm}) {
+    width: 90%;
   }
 `;
 
@@ -17,12 +18,21 @@ interface TextProps {
 
 export const Text = styled.p<TextProps>`
   color: ${(props) => (props.secondary ? props.theme.colors.green : 'white')};
+
+  font-size: ${({ secondary, theme: { bodyFontSizes } }) =>
+    secondary ? '20px' : bodyFontSizes.sm};
+  @media (${({ theme: { breakpoints } }) => breakpoints.lg}) {
+    font-size: ${({ secondary, theme: { bodyFontSizes } }) =>
+      secondary ? '22px' : bodyFontSizes.lg};
+  }
 `;
 
 export const Group = styled.div`
   width: 100%;
   justify-content: space-between;
+  align-items: center;
   display: flex;
+  padding: ${({ theme: { space } }) => space.md} 0;
 `;
 
 export const SliderContainer = styled.div`
@@ -38,7 +48,7 @@ interface StyledSliderProps {
 export const StyledSlider = styled.input<StyledSliderProps>`
   outline: none;
   width: 100%;
-  height: 5px;
+  height: 7px;
   appearance: none;
   background-color: ${({ theme: { colors } }) => colors.black};
   outline: none;
@@ -49,7 +59,7 @@ export const StyledSlider = styled.input<StyledSliderProps>`
   ::after {
     content: '';
     position: absolute;
-    height: 5px;
+    height: 7px;
     background-color: ${({ theme: { colors } }) => colors.green};
     left: 0%;
     right: ${(props) => Math.abs((props.value / props.max) * 100 - 100) + '%'};

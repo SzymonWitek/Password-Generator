@@ -26,7 +26,7 @@ function Panel() {
       <Wrapper>
         <RangeSlider
           min={0}
-          max={10}
+          max={20}
           value={charLenght}
           setValue={setCharLength}
         />
