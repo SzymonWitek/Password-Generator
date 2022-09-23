@@ -5,7 +5,8 @@ export {
   Card,
   Button,
   Clipboard,
-  Field
+  Field,
+  Modal
 } from './UI';
 
 export { Bars } from './Bars';

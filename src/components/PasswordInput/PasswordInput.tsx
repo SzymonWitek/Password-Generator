@@ -5,16 +5,14 @@ import { Clipboard } from 'components';
 import { StyledInput, IconWrapper } from './PasswordInput.css';
 
 function PasswordInput() {
-  const passContext = useContext(PasswordContext) as PasswordContextI;
+  const { password, setPassword } = useContext(
+    PasswordContext
+  ) as PasswordContextI;
 
   return (
-    <StyledInput
-      placeholder="P4$W0rd@"
-      value={passContext!.password}
-      setValue={passContext!.setPassword}
-    >
+    <StyledInput placeholder="P4$W0rd@" value={password} setValue={setPassword}>
       <IconWrapper>
-        <Clipboard copyValue="a" />
+        <Clipboard copyValue={password} />
       </IconWrapper>
     </StyledInput>
   );
