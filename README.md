@@ -9,7 +9,7 @@
 </ul><ul>
 <li>Typescript</li>
 </ul><h2>Screenshots</h2>
-<hr><p><img src="https://i.postimg.cc/vmCLYdRR/img.png" alt=""></p><h5>Steps</h5><ul>
+<hr><p><img src="https://i.postimg.cc/J0T4cM5t/img.png" alt=""></p><h5>Steps</h5><ul>
 <li>download or clone the repository</li>
 </ul><ul>
 <li>run npm i / yarn install</li>
