@@ -1,12 +1,11 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 
-import { PasswordContext } from 'contexts';
+import { PasswordContext, PasswordContextI } from 'contexts';
 import { Clipboard } from 'components';
 import { StyledInput, IconWrapper } from './PasswordInput.css';
 
 function PasswordInput() {
-  // const [password, setPassword] = useState('');
-  const passContext = useContext(PasswordContext);
+  const passContext = useContext(PasswordContext) as PasswordContextI;
 
   return (
     <StyledInput
@@ -15,7 +14,7 @@ function PasswordInput() {
       setValue={passContext!.setPassword}
     >
       <IconWrapper>
-        <Clipboard />
+        <Clipboard copyValue="a" />
       </IconWrapper>
     </StyledInput>
   );

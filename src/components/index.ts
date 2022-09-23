@@ -13,3 +13,5 @@ export { PasswordInput } from './PasswordInput';
 export { Panel } from './Panel';
 export { Summary } from './Summary';
 export { PasswordGenerator } from './PasswordGenerator';
+export { PasswordProvider } from './PasswordProvider';
+export { Options } from './Options';

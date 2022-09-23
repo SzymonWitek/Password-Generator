@@ -24,22 +24,6 @@ export const Wrapper = styled.div`
   align-items: center;
 `;
 
-export const Option = styled.div`
-  display: flex;
-  height: 25px;
-  margin: ${({ theme: { space } }) => space.md} 0;
-  width: 100%;
-
-  @media (${({ theme: { breakpoints } }) => breakpoints.ssm}) {
-    width: 90%;
-  }
-`;
-
-export const Text = styled.p`
-  display: flex;
-  align-items: center;
-`;
-
 export const StyledButton = styled(Button)`
   width: 100%;
   margin: ${({ theme: { space } }) => space.xl} 0;

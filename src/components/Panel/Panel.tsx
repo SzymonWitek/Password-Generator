@@ -1,25 +1,13 @@
-import { useState } from 'react';
+import { useContext } from 'react';
+import { PasswordContext, PasswordContextI } from 'contexts';
 
-import { Checkbox, Summary, RangeSlider, PasswordGenerator } from 'components';
-import { StyledCard, Option, Text, StyledButton, Wrapper } from './Panel.css';
+import { Summary, RangeSlider, PasswordGenerator, Options } from 'components';
+import { StyledCard, Wrapper } from './Panel.css';
 
 function Panel() {
-  const [isUppercaseActive, setIsUppercaseActive] = useState(false);
-  const [isLowercaseActive, setIsLowercase] = useState(false);
-  const [isNumbersActive, setIsNumbersActive] = useState(false);
-  const [isSymbolsActive, setIsSymbolsActive] = useState(false);
-  const [charLenght, setCharLength] = useState(0);
-
-  const securityLevel = [
-    isUppercaseActive,
-    isLowercaseActive,
-    isNumbersActive,
-    isSymbolsActive
-  ].reduce(
-    (prevVal, currVal) =>
-      currVal ? Number(prevVal) + Number(currVal) : prevVal,
-    0
-  ); //TODO:MEMOIZATION
+  const { charLength, setCharLength } = useContext(
+    PasswordContext
+  ) as PasswordContextI;
 
   return (
     <StyledCard>
@@ -27,44 +15,12 @@ function Panel() {
         <RangeSlider
           min={0}
           max={20}
-          value={charLenght}
+          value={charLength}
           setValue={setCharLength}
         />
-        <Option>
-          <Checkbox
-            isActive={isUppercaseActive}
-            setIsActive={setIsUppercaseActive}
-          />
-          <Text>Include Uppercase Letters</Text>
-        </Option>
-        <Option>
-          <Checkbox isActive={isLowercaseActive} setIsActive={setIsLowercase} />
-          <Text>Include Lowercase Letters</Text>
-        </Option>
-        <Option>
-          <Checkbox
-            isActive={isNumbersActive}
-            setIsActive={setIsNumbersActive}
-          />
-          <Text>Include Numbers</Text>
-        </Option>
-        <Option>
-          <Checkbox
-            isActive={isSymbolsActive}
-            setIsActive={setIsSymbolsActive}
-          />
-          <Text>Include Symbols</Text>
-        </Option>
-        <Summary level={securityLevel} />
-        <PasswordGenerator
-          args={{
-            length: charLenght,
-            symbols: isSymbolsActive,
-            numbers: isNumbersActive,
-            lowercases: isLowercaseActive,
-            uppercases: isUppercaseActive
-          }}
-        />
+        <Options />
+        <Summary />
+        <PasswordGenerator />
       </Wrapper>
     </StyledCard>
   );

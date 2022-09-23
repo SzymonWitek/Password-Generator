@@ -1,20 +1,33 @@
-import { Wrapper, Text, Group, Message } from './Summary.css';
+import { useContext } from 'react';
+
+import { PasswordContext, PasswordContextI } from 'contexts';
 import { Bars } from 'components';
+import { Wrapper, Text, Group, Message } from './Summary.css';
 
 const MESSAGES = ['Bad', 'Weak', 'Medium', 'Strong'];
 const DEFAULT_MESSAGE = 'Horrible';
 
-interface SummaryProps {
-  level?: number;
-}
+function Summary() {
+  const { uppercaseActive, lowercaseActive, numbersActive, symbolsActive } =
+    useContext(PasswordContext) as PasswordContextI;
 
-function Summary({ level = 3 }: SummaryProps) {
+  const securityLevel = [
+    uppercaseActive,
+    lowercaseActive,
+    numbersActive,
+    symbolsActive
+  ].reduce(
+    (prevVal, currVal) =>
+      currVal ? Number(prevVal) + Number(currVal) : prevVal,
+    0
+  );
+
   return (
     <Wrapper>
       <Text>strength</Text>
       <Group>
-        <Message>{MESSAGES[level - 1] || DEFAULT_MESSAGE}</Message>
-        <Bars num={4} activeNum={level} />
+        <Message>{MESSAGES[securityLevel - 1] || DEFAULT_MESSAGE}</Message>
+        <Bars num={4} activeNum={securityLevel} />
       </Group>
     </Wrapper>
   );

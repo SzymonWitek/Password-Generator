@@ -13,8 +13,8 @@ export const StyledButton = styled.button`
 
   :hover {
     cursor: pointer;
-    border: 3px solid ${({ theme: { colors } }) => colors.green};
+    border: 3px solid ${({ theme: { colors } }) => colors.white};
     background-color: transparent;
-    color: ${({ theme: { colors } }) => colors.green};
+    color: ${({ theme: { colors } }) => colors.white};
   }
 `;

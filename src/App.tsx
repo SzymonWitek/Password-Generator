@@ -1,15 +1,12 @@
-import { useState } from 'react';
-import { PasswordContext } from 'contexts';
+import { PasswordProvider } from 'components';
 
 import { Home } from 'pages';
 
 function App() {
-  const [password, setPassword] = useState('');
-
   return (
-    <PasswordContext.Provider value={{ password, setPassword }}>
+    <PasswordProvider>
       <Home />
-    </PasswordContext.Provider>
+    </PasswordProvider>
   );
 }
 
