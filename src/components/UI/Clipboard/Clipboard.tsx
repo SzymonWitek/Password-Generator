@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { faCopy } from '@fortawesome/free-solid-svg-icons';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import { Modal } from 'components';
 import { Icon, Text } from './Clipboard.css';
@@ -19,16 +20,18 @@ function Clipboard({ copyValue }: ClipboardProps) {
   return (
     <>
       <Icon icon={faCopy} onClick={handleClipboardClick} />
-      {isModalOpen && (
-        <Modal setOpen={setIsModalOpen}>
-          <Text bold textAlign="center">
-            Password copied to clipboard!
-          </Text>
-          <Text textAlign="center">
-            To paste the password, press CTRL + V on your keyboard.
-          </Text>
-        </Modal>
-      )}
+      <AnimatePresence>
+        {isModalOpen && (
+          <Modal setOpen={setIsModalOpen}>
+            <Text bold textAlign="center">
+              Password copied to clipboard!
+            </Text>
+            <Text textAlign="center">
+              To paste the password, press CTRL + V on your keyboard.
+            </Text>
+          </Modal>
+        )}
+      </AnimatePresence>
     </>
   );
 }
