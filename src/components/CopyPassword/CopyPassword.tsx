@@ -8,6 +8,7 @@ import { Clipboard, Modal } from 'components';
 function CopyPassword() {
   const { password } = useContext(PasswordContext) as PasswordContextI;
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   const openModal = () => {
     setIsModalOpen(true);
   };

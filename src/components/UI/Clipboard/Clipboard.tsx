@@ -9,9 +9,10 @@ interface ClipboardProps {
 
 function Clipboard({ copyValue, onSuccess }: ClipboardProps) {
   const handleClipboardClick = () => {
+    if (!(copyValue.length > 0)) return;
     navigator.clipboard
       .writeText(copyValue)
-      .then((res) => onSuccess())
+      .then(() => onSuccess())
       .catch((err: Error) => console.error(err));
   };
 
