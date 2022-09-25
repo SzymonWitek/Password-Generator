@@ -12,7 +12,12 @@ function Bars({ num, activeNum }: BarsProps) {
     <Wrapper>
       {items.length > 0 &&
         items.map((item, index) => {
-          return <Bar key={Math.random()} isActive={index <= activeNum - 1} />;
+          return (
+            <Bar
+              key={index + Math.floor(Math.random() * 1000)}
+              isActive={index <= activeNum - 1}
+            />
+          );
         })}
     </Wrapper>
   );
