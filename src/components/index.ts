@@ -16,3 +16,4 @@ export { Summary } from './Summary';
 export { PasswordGenerator } from './PasswordGenerator';
 export { PasswordProvider } from './PasswordProvider';
 export { Options } from './Options';
+export { CopyPassword } from './CopyPassword';

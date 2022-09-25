@@ -1,39 +1,21 @@
-import { useState } from 'react';
 import { faCopy } from '@fortawesome/free-solid-svg-icons';
-import { AnimatePresence, motion } from 'framer-motion';
 
-import { Modal } from 'components';
-import { Icon, Text } from './Clipboard.css';
+import { Icon } from './Clipboard.css';
 
 interface ClipboardProps {
   copyValue: string;
+  onSuccess: () => void;
 }
 
-function Clipboard({ copyValue }: ClipboardProps) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
+function Clipboard({ copyValue, onSuccess }: ClipboardProps) {
   const handleClipboardClick = () => {
-    setIsModalOpen(true);
-    navigator.clipboard.writeText(copyValue);
+    navigator.clipboard
+      .writeText(copyValue)
+      .then((res) => onSuccess())
+      .catch((err: Error) => console.error(err));
   };
 
-  return (
-    <>
-      <Icon icon={faCopy} onClick={handleClipboardClick} />
-      <AnimatePresence>
-        {isModalOpen && (
-          <Modal setOpen={setIsModalOpen}>
-            <Text bold textAlign="center">
-              Password copied to clipboard!
-            </Text>
-            <Text textAlign="center">
-              To paste the password, press CTRL + V on your keyboard.
-            </Text>
-          </Modal>
-        )}
-      </AnimatePresence>
-    </>
-  );
+  return <Icon icon={faCopy} onClick={handleClipboardClick} />;
 }
 
 export default Clipboard;

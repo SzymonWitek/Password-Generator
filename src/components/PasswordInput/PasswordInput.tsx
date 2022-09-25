@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 
 import { PasswordContext, PasswordContextI } from 'contexts';
-import { Clipboard } from 'components';
+import { CopyPassword } from 'components';
 import { StyledInput, IconWrapper } from './PasswordInput.css';
 
 function PasswordInput() {
@@ -12,7 +12,7 @@ function PasswordInput() {
   return (
     <StyledInput placeholder="P4$W0rd@" value={password} setValue={setPassword}>
       <IconWrapper>
-        <Clipboard copyValue={password} />
+        <CopyPassword />
       </IconWrapper>
     </StyledInput>
   );
