@@ -1,6 +1,6 @@
 <h1>Password-Generator</h1>
-<hr><p>Application to generate secure random password based on options selected by user.</p><h2>Technologies Used</h2>
 <hr><p>Github pages link: <a href="https://szymonwitek.github.io/Password-Generator"/>Link</a></p>
+<hr><p>Application to generate secure random password based on options selected by user.</p><h2>Technologies Used</h2>
 <hr><ul>
 <li>CSS</li>
 </ul><ul>
